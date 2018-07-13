@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Callbacks</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var Tablenumber = 3; //parameter that shows table number
+		var items = [" Burger", " pasta", " coke"];//parameter that shows items served
+		function prepareFood (Tablenumber, items, callback) {//function created with a callback function included
+	    document.write("Preparing food for items - " + "(" + Tablenumber + ")" + items + "<br>");
+		document.write("serving food for items - " + "(" + Tablenumber + ")" + callback(Tablenumber, items));
+	    }
+	    function serveFood (Tablenumber, items)//function that shows food served
+	    {return items;}
+	    prepareFood (Tablenumber, items, serveFood);//function called
+    </script>
+</body>
+</html>
